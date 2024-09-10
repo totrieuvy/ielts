@@ -1,0 +1,97 @@
+.dung {
+  padding: 20px;
+  color: #333;
+
+  h1 {
+    text-align: center;
+    color: #e74c3c; // Màu đỏ để nổi bật
+    margin: 20px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    &__left {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: auto; // Đặt chiều cao tự động
+        max-height: 100%; // Giới hạn chiều cao không vượt quá phần chứa
+        object-fit: cover; // Đảm bảo ảnh không bị biến dạng
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &__right {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        color: #3498db;
+        margin-top: 20px;
+      }
+
+      &__ul {
+        list-style-type: circle;
+        padding-left: 20px;
+
+        li {
+          margin-bottom: 10px;
+          font-size: 21px;
+        }
+      }
+    }
+  }
+
+  &__certificate {
+    margin-top: 40px;
+    width: 100%; // Chiếm full width
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%; // Đảm bảo ảnh chiếm full width
+      height: auto; // Đặt chiều cao tự động để duy trì tỷ lệ khung hình
+      max-height: 400px; // Giới hạn chiều cao tối đa
+      object-fit: contain; // Đảm bảo ảnh không bị bể
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // Responsive styles for mobile devices
+  @media (max-width: 768px) {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      &__left,
+      &__right {
+        min-width: 100%;
+        text-align: center;
+      }
+
+      &__left img {
+        height: auto; // Đặt chiều cao tự động cho mobile
+        max-height: 300px; // Giới hạn chiều cao cho ảnh trên thiết bị di động
+      }
+    }
+
+    &__certificate {
+      margin-top: 20px;
+    }
+  }
+}

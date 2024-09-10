@@ -1,0 +1,19 @@
+.toeic {
+  &__title {
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+    color: red;
+    transition: all 0.3s;
+  }
+
+  &__content {
+    margin: 0px 50px;
+    font-size: 18px;
+    line-height: 30px;
+
+    &__span {
+      font-weight: 600;
+    }
+  }
+}

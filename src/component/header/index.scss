@@ -1,0 +1,70 @@
+.header {
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; /* Để tránh khoảng trống không cần thiết */
+  background-color: #ffebcd;
+  min-height: 100px; /* Đảm bảo chiều cao chỉ dựa trên nội dung */
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &__left {
+    img {
+      max-height: 100px; /* Điều chỉnh chiều cao của logo */
+      object-fit: contain; /* Đảm bảo hình ảnh hiển thị đúng tỉ lệ */
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content__navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__navigation__ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0; /* Đảm bảo không có khoảng trống thừa */
+    margin: 0; /* Đảm bảo không có khoảng trống thừa */
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+
+  .link {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: #000;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:hover {
+      color: orange;
+    }
+  }
+}
