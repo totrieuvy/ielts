@@ -6,7 +6,10 @@ function Header() {
     <header className="header">
       <div className="header__left">
         <Link to="/">
-          <img src="./image/logo2.png" width={120} />
+          <img
+            src="https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/438305488_1120474259123204_5879213583446500616_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=godXrO0cdM0Q7kNvgGDieY5&_nc_ht=scontent.fsgn5-15.fna&_nc_gid=AVNoNWX3VGD-RQ6amrrFN5E&oh=00_AYChqwid4tQFCcxmyUcbhBvIhmyL-OY-3uPD_h1DH7D9bg&oe=66E726BF"
+            width={120}
+          />
         </Link>
         <div className="header__content"></div>
       </div>
