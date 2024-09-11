@@ -1,28 +1,22 @@
+/* SCSS cho info */
 .info {
+  width: 100%;
+  height: 100%;
+
   &__title {
-    padding: 15px 0px;
+    padding: 15px 0;
     display: flex;
     justify-content: center;
     color: red;
     transition: all 0.3s;
-    font-size: 35px;
-  }
-
-  &__content {
-    margin: 0px 50px;
-    font-size: 18px;
-    line-height: 30px;
-
-    &__span {
-      font-weight: 600;
-    }
+    font-size: 30px;
   }
 
   .info__teachers {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); // 4 cards per row
-    gap: 20px; // space between cards
-    margin: 20px 50px;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px; /* space between cards */
+    margin: 15px 50px;
 
     .card__result {
       color: red;
@@ -31,22 +25,22 @@
 
   .teacher-card {
     width: 100%;
-    max-width: 250px; // Adjust card width
-    margin: 0 auto; // Center the card
+    max-width: 250px; /* Adjust card width */
+    margin: 0 auto; /* Center the card */
     transition: transform 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; // Make sure all cards have the same height
+    height: 100%; /* Make sure all cards have the same height */
 
     .ant-card-cover img {
       width: 100%;
-      height: 250px; // Set the height for images
-      object-fit: cover; // Ensure images fit within the card
+      height: 250px; /* Set the height for images */
+      object-fit: cover; /* Ensure images fit within the card */
     }
 
     &:hover {
-      transform: scale(1.05); // Slight scale effect on hover
+      transform: scale(1.05); /* Slight scale effect on hover */
     }
   }
 
@@ -71,20 +65,16 @@
   }
 
   &__intro {
-    background-color: #ffebcd;
-    padding-top: 10px;
-
-    // Chỉnh ảnh trong phần info__intro
-    img {
-      max-width: 100%;
-      height: 100%; // Set height to 100% to occupy full height of the container
-      object-fit: cover; // Make sure the image fits nicely without distortion
-    }
-
     display: flex;
     justify-content: space-evenly;
-    align-items: stretch; // Ensure the child elements fill the height
+    align-items: stretch; /* Ensure the child elements fill the height */
     line-height: 35px;
+
+    img {
+      max-width: 100%;
+      height: 100%; /* Set height to 100% to occupy full height of the container */
+      object-fit: cover; /* Make sure the image fits nicely without distortion */
+    }
 
     .left2 {
       color: orange;
@@ -97,13 +87,13 @@
       }
 
       &__text {
-        font-size: 50px;
+        font-size: 40px;
       }
 
       &__ul {
         text-decoration: none;
         color: #000;
-        font-size: 28px;
+        font-size: 25px;
 
         li {
           list-style: none;
@@ -111,5 +101,62 @@
         }
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    .info__intro {
+      flex-direction: column; /* Stack children vertically on mobile */
+      align-items: center; /* Center align items */
+      img {
+        height: auto; /* Adjust image height on mobile */
+      }
+      .left2 {
+        font-size: 24px; /* Adjust font-size on mobile */
+      }
+      &__left {
+        &__content {
+          line-height: 40px; /* Adjust line-height on mobile */
+          margin-bottom: 15px;
+        }
+
+        &__text {
+          font-size: 40px; /* Adjust font-size on mobile */
+        }
+
+        &__ul {
+          font-size: 22px; /* Adjust font-size on mobile */
+        }
+      }
+    }
+
+    .info__teachers {
+      grid-template-columns: 1fr; /* 1 card per row on mobile */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .info__intro {
+      &__left {
+        &__content {
+          line-height: 35px; /* Further adjust line-height on very small screens */
+          margin-bottom: 10px;
+        }
+
+        &__text {
+          font-size: 35px; /* Further adjust font-size on very small screens */
+        }
+
+        &__ul {
+          font-size: 20px; /* Further adjust font-size on very small screens */
+        }
+      }
+    }
+  }
+
+  .ant-card-body {
+    padding-top: 24px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
   }
 }

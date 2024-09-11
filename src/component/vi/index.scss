@@ -13,29 +13,35 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-    align-items: stretch; // Đảm bảo các phần tử con có chiều cao bằng nhau
+    align-items: stretch; // Ensures equal height for child elements
 
-    &__left {
+    &__left,
+    &__right {
       flex: 1;
       min-width: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
+      box-sizing: border-box;
+      // Optional: Set a min-height for better consistency
+      min-height: 300px;
 
       img {
         width: 100%;
-        height: auto;
-        max-height: 100%;
+        height: 100%; // Ensures image takes full height of its container
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
     }
 
+    &__left {
+      img {
+        width: 70%;
+      }
+    }
+
     &__right {
-      flex: 1;
-      min-width: 300px;
-      display: flex;
       flex-direction: column;
       justify-content: center;
 
@@ -82,6 +88,7 @@
       &__right {
         min-width: 100%;
         text-align: center;
+        min-height: auto; // Allow the height to adjust for smaller screens
       }
 
       &__left img {

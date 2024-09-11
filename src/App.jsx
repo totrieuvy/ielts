@@ -8,6 +8,8 @@ import NgocHa from "./component/ha";
 import QueXuan from "./component/xuan";
 import Toeic from "./component/toeic";
 import Ielts from "./component/ielts";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   const router = createBrowserRouter([
     {

@@ -1,0 +1,45 @@
+.footer {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+
+  &__h2 {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    color: orange;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    &__left {
+      &__h4 {
+        margin-bottom: 0;
+      }
+
+      .span {
+        font-weight: 600;
+      }
+    }
+
+    p {
+      margin-bottom: 0px;
+    }
+
+    &__right {
+      &__h4 {
+        margin-bottom: 0px;
+      }
+
+      .icon {
+        font-size: 30px;
+      }
+
+      &__icon {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}
